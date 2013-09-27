@@ -1,0 +1,30 @@
+{
+	"name": "unpind",
+	"version": "0.0.1",
+	"description": "A web application built with node.js, mongodb, and express",
+	"author": {
+		"name": "Kimberly Pienta",
+		"email": "kapienta@gmail.com"
+	},
+	"website":{
+		"url": "www.unpind.com"
+	},
+		"repository": {
+		"type": "git",
+		"url": "git://github.com/kimpie/test-project.git"
+	},
+	"private": true,
+	"dependencies": {
+		"express": "3.0.6",
+		"stylus": "0.31.0",
+		"jade": "0.27.7",
+		"mongodb": "1.2.7",
+		"moment" : "1.7.2",
+		"emailjs": "0.3.3",
+		"socket.io": "*"
+	},
+	"engines": {
+		"node": "0.8.14",
+		"npm":  "1.1.65"
+	}
+}

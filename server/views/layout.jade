@@ -1,0 +1,19 @@
+!!! 5
+html
+	head
+		title unpind
+		link(rel='stylesheet', href='/vendor/bootstrap.min.css')
+		link(rel='stylesheet', href='/css/style.css')
+		link(href='http://fonts.googleapis.com/css?family=Oxygen', rel='stylesheet', type='text/css')
+		
+
+	body
+		nav.navbar.navbar-inner.navbar-default(role='navigation')
+			ul.nav
+				li
+					a(href='/').nav.navbar-nav.navbar-brand Home
+				li
+					a(href='/about').nav.navbar-nav.navbar-right About
+			
+	block content
+	block scripts

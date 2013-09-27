@@ -1,0 +1,49 @@
+head
+	<script>function utmx_section(){}function utmx(){}(function(){var
+	k='76424446-1',d=document,l=d.location,c=d.cookie;
+	if(l.search.indexOf('utm_expid='+k)>0)return;
+	function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+	indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+	length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+	'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+	'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+	'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+	valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+	'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+	</script><script>utmx('url','A/B');</script>
+
+
+extends layout
+
+block content
+	div.mainheading 
+		img(src="http://i.imgur.com/iGCCd7A.png")
+	div.secondheading
+		p.lead One craft a week.  Join this tutorial live over video chat.
+	div.row
+		div.span8.offset2
+			img(src="http://i.imgur.com/qJmP88v.png?1").img-polaroid
+		div.span4.offset1.actions
+			h3 Join to receive tutorial details
+		div.span4.offset1.right-col
+			a(href='/login').button(type="button", data-toggle="Modal").btn.btn-large.btn-primary JOIN
+		div.span4.offset1.right-col
+			p.lead Share with friends!
+			div.addthis_toolbox.addthis_default_style.addthis_32x32_style
+				a.addthis_button_preferred_1
+				a.addthis_button_preferred_2
+				a.addthis_button_preferred_3
+				a.addthis_button_preferred_4
+				a.addthis_button_compact
+				a.addthis_counter addthis_bubble_style
+				
+
+	include modals/create
+
+block scripts
+	script(src='/vendor/jquery.min.js')
+	script(src='/vendor/jquery.form.js')
+	script(src='/vendor/bootstrap-modal.js')
+	script(src='/vendor/bootstrap-transition.js')
+	script(src='var addthis_config = "data_track_addressbar":true')
+	script(src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5200a667119977b7")

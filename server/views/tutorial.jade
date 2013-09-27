@@ -1,0 +1,35 @@
+extends layout
+	
+block content
+	div.mainheading 
+		img(src="http://i.imgur.com/iGCCd7A.png")
+	div.secondheading
+		p.lead One craft a week.  Join to recevie this craft tutorial.
+
+	div.row
+		div.span8.offset2
+			img(src="http://i.imgur.com/qJmP88v.png?1").img-polaroid
+		div.span4.offset1.actions
+			h3 Join to receive tutorial details
+		div.span4.offset1.right-col
+			a(href='/login').button(type="button", data-toggle="Modal").btn.btn-large.btn-primary JOIN
+		div.span4.offset1.right-col
+			p.lead Share with friends!
+			div.addthis_toolbox.addthis_default_style.addthis_32x32_style
+				a.addthis_button_preferred_1
+				a.addthis_button_preferred_2
+				a.addthis_button_preferred_3
+				a.addthis_button_preferred_4
+				a.addthis_button_compact
+				a.addthis_counter addthis_bubble_style
+				
+
+	include modals/create
+
+block scripts
+	script(src='/vendor/jquery.min.js')
+	script(src='/vendor/jquery.form.js')
+	script(src='/vendor/bootstrap-modal.js')
+	script(src='/vendor/bootstrap-transition.js')
+	script(src='var addthis_config = "data_track_addressbar":true')
+	script(src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5200a667119977b7")
