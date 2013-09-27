@@ -1,1 +1,1 @@
-web: node unpindapp
+web: node unpindapp.js
