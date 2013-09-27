@@ -1,8 +1,8 @@
 var express = require('express');
 var http = require('http');
 var fs = require('fs');
+var app = express();
 
-var app = express.createServer(express.logger());
 
 app.configure(function(){
 	app.set('port', 8080);
