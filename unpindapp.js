@@ -16,7 +16,7 @@ mongo.Db.connect(mongoUri, function (err, db) {
 });
 
 app.configure(function(){
-	app.set('port', 8080);
+	app.set('port', process.env.PORT);
 	app.set('views', __dirname + '/server/views');
 	app.set('view engine', 'jade');
 	app.locals.pretty = true;
