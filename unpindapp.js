@@ -2,7 +2,18 @@ var express = require('express');
 var http = require('http');
 var fs = require('fs');
 var app = express();
+var mongo = require('mongodb');
 
+var mongoUri = process.env.MONGOLAB_URI ||
+  process.env.MONGOHQ_URL ||
+  'mongodb://localhost/node-login';
+
+mongo.Db.connect(mongoUri, function (err, db) {
+  db.collection('mydocs', function(er, collection) {
+    collection.insert({'mykey': 'myvalue'}, {safe: true}, function(er,rs) {
+    });
+  });
+});
 
 app.configure(function(){
 	app.set('port', 8080);
