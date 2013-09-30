@@ -21,6 +21,10 @@ module.exports = function(app) {
 		res.render('login2', {title: "welcome"});
 	});
 
+	app.get('login3', function(req, res){{
+		res.render('login3', {title: "welcome"});
+	}});
+
 // main login page //
 
 	app.get('/login', function(req, res){
