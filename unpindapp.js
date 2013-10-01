@@ -4,16 +4,16 @@ var fs = require('fs');
 var app = express();
 var mongo = require('mongodb');
 
-var mongoUri = process.env.MONGOLAB_URI ||
-  process.env.MONGOHQ_URL ||
-  'mongodb://localhost/node-login';
+//var mongoUri = process.env.MONGOLAB_URI ||
+  //process.env.MONGOHQ_URL ||
+ // 'mongodb://localhost/node-login';
 
-mongo.Db.connect(mongoUri, function (err, db) {
-  db.collection('collections', function(er, collection) {
-    collection.insert({'name': 'value'}, {safe: true}, function(er,rs) {
-    });
-  });
-});
+//mongo.Db.connect(mongoUri, function (err, db) {
+  //db.collection('collections', function(er, collection) {
+    //collection.insert({'name': 'value'}, {safe: true}, function(er,rs) {
+    //});
+  //});
+//});
 
 app.configure(function(){
 	app.set('port', process.env.PORT);
